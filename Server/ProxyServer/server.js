@@ -16,7 +16,7 @@ console.log(path.join(__dirname,'public'))
 app.use(express.static(path.join(__dirname,'public')))
 
 app.get("/proxy/words", async (req,res) => {
-    const url= "http://loripsum.net/api/10/short/headers"
+    const url= "http://loripsum.net/api/1/short"
     console.log(url)
  
      try{
