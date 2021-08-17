@@ -1,0 +1,22 @@
+{
+  "name": "ericprojects",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "engines": {
+    "node": "14.16.1",
+    "npm":"6.14.12"
+  },
+  "scripts": {
+    "start": "node ./ProxyServer/server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "node": "^16.6.1",
+    "nodemon": "^2.0.12"
+  }
+}
