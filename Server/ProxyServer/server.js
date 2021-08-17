@@ -39,11 +39,7 @@ app.get("/proxy", async (req,res) => {
     }
 })
 
-app.get("/",(req,res) => {
-    res.set('Content-Type', 'text/html');
-    res.send(Buffer.from("<h2>Eric's first project!</h2><p> use a GET to /proxy/ and follow with the desired url"));
-    
-})
+
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT,() => {
