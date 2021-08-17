@@ -11,7 +11,8 @@ const app = express()
 
 app.use(cors());
 
-//app.use(express.static('public'))
+app.use(express.static('public'))
+
 app.get("/proxy/words", async (req,res) => {
     const url= "http://loripsum.net/api/10/short/headers"
     console.log(url)
