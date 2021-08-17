@@ -11,7 +11,8 @@ const app = express()
 
 app.use(cors());
 
-app.use(express.static('public'))
+app.use("/",express.static('public'))
+
 app.get("/proxy/words", async (req,res) => {
     const url= "http://loripsum.net/api/10/short/headers"
     console.log(url)
@@ -39,8 +40,8 @@ app.get("/proxy", async (req,res) => {
 })
 
 app.get("/",(req,res) => {
-    res.set('Content-Type', 'text/html');
-    res.send(Buffer.from("<h2>Eric's first project!</h2><p> use a GET to /proxy/ and follow with the desired url"));
+   // res.set('Content-Type', 'text/html');
+    //res.send(Buffer.from("<h2>Eric's first project!</h2><p> use a GET to /proxy/ and follow with the desired url"));
     
 })
 
