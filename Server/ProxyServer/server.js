@@ -2,6 +2,7 @@ const axios = require('axios')
 const cors = require('cors');
 const express = require('express')
 const path = require('path')
+const paramLogic = require('./paramLogic.js')
 
 
 //set up express instance
@@ -11,20 +12,20 @@ const app = express()
 
 app.use(cors());
 
-console.log(path.join(__dirname,'public'))
 
 app.use(express.static(path.join(__dirname,'public')))
 
 app.get("/proxy/words", async (req,res) => {
-    const url= "http://loripsum.net/api/1/short"
-    console.log(url)
- 
+    const baseUrl= "http://loripsum.net/api"
+    
+    
      try{
-         const data = await axios.get(url)
+        const fullUrl=  paramLogic(req.query, baseUrl)
+         const data = await axios.get(fullUrl)
          res.json(data.data)
      } catch(err){
          res.send("could not complete")
-       //  console.log(err)
+        //console.log(err)
      }
  })
 
@@ -47,9 +48,9 @@ app.get("/",(req,res) => {
     
 })
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 
 app.listen(PORT,() => {
 
-    console.log('listening on port 3000')
+    console.log('listening on port',PORT)
 })
