@@ -42,7 +42,7 @@ const SampleCall = () => {
        apiCall()
     }
        
-   },[params])
+   },[params, showContent])
 
 
 

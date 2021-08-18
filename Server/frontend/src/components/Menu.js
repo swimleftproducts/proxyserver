@@ -1,5 +1,7 @@
 import React from 'react';
 
+
+
 const Menu = (props) => {
     
     return(
@@ -19,7 +21,7 @@ const Menu = (props) => {
             <div style={{"maxHeight":"55px"}}>
             
             <img alt="logo" 
-            src="http://34.220.35.170/wp-content/uploads/2020/01/SwimLeft_SiteLogoDark.png"
+            src="/SwimLeft_SiteLogoDark.png"
             style={{ "marginTop": ".7em"}}
             className=" ui image "
             />
