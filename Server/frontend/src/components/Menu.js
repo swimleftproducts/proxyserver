@@ -21,7 +21,7 @@ const Menu = (props) => {
             <div style={{"maxHeight":"55px"}}>
             
             <img alt="logo" 
-            src={"/SwimLeft_SiteLogoDark.png"}
+            src={"/public/SwimLeft_SiteLogoDark.png"}
             style={{ "marginTop": ".7em"}}
             className=" ui image "
             />
