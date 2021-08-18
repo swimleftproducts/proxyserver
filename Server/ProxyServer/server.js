@@ -15,11 +15,10 @@ app.use(cors());
 
 //app.use(express.static(path.join(__dirname,'public')))
 
-app.use(express.static(path.join(__dirname, 'build')))
+app.use(express.static(path.join(__dirname, 'frontend/build')))
 
 app.get("/proxy/words", async (req,res) => {
     const baseUrl= "http://loripsum.net/api"
-    i
     
      try{
         const fullUrl=  paramLogic(req.query, baseUrl)

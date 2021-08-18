@@ -1,5 +1,6 @@
 import React from 'react';
-import { render } from 'react-dom';
+import SampleCall from './SampleCall';
+
 
 const Body = (props) => {
     
@@ -7,7 +8,7 @@ const Body = (props) => {
         if(props.activeMenu==="HOME"){
           return(
             <div className="pusher" >
-                <div className="ui inverted vertical masthead center aligned segment" style={{"min-height":"90vh"}}>         
+                <div className="ui inverted vertical masthead center aligned segment" style={{"minHeight":"90vh"}}>         
                     <div className="ui text container">
                     <h1 className="ui inverted header">
                     Proxy server API
@@ -27,11 +28,11 @@ const Body = (props) => {
         }else if( props.activeMenu==="LORIPSUM"){
             return(
                 <div className="pusher" >
-                <div className="ui inverted vertical masthead  aligned segment" style={{"min-height":"90vh"}}>         
+                <div className="ui inverted vertical masthead  aligned segment" style={{"minHeight":"90vh"}}>         
                     <div className="ui text container">
-                    <h1   style={{ "margin-top": "5em"}}>
+                    <h1   style={{ "marginTop": "5em"}}>
                     Make a call to the API found here:<br/>
-                    <a href="https://loripsum.net/">Sorce</a>
+                    <a href="https://loripsum.net/" target="_blank"  rel="noreferrer">Sorce</a>
                     </h1>
                     <h2>Currently a call to this api will result in a CORS rejection because the header is not set as required by the browser</h2>
                     <div>
@@ -49,6 +50,9 @@ const Body = (props) => {
                             <div class="item">length= short medium or long  ... add length of each paragraph of content</div>
                         </div>
                     </div>
+                    <div style={{'paddingTop':"50px"}}>
+                        <SampleCall/>
+                    </div>
                 </div>
                 </div>
             </div>
@@ -57,9 +61,9 @@ const Body = (props) => {
         }else if (props.activeMenu==="OWNAPI"){
             return(
                 <div className="pusher" >
-                <div className="ui inverted vertical masthead  aligned segment" style={{"min-height":"90vh"}}>         
+                <div className="ui inverted vertical masthead  aligned segment" style={{"minHeight":"90vh"}}>         
                     <div className="ui text container">
-                    <h1   style={{ "margin-top": "5em"}}>
+                    <h1   style={{ "marginTop": "5em"}}>
                         Comming soon ...
                     </h1>
                         

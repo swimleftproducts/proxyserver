@@ -4,7 +4,7 @@ const Menu = (props) => {
     
     return(
         
-    <div className="ui large top fixed  menu" style={{"min-height":"60px"}}>
+    <div className="ui large top fixed  menu" style={{"minHeight":"60px"}}>
         <div className="ui container">
              <span onClick={(() => {
                  props.setActiveMenu("HOME")
@@ -16,11 +16,11 @@ const Menu = (props) => {
                  props.setActiveMenu("OWNAPI")
              })} className="item">Your own API</span>
             <div className="right menu  ">
-            <div style={{"max-height":"55px"}}>
+            <div style={{"maxHeight":"55px"}}>
             
             <img alt="logo" 
             src="http://34.220.35.170/wp-content/uploads/2020/01/SwimLeft_SiteLogoDark.png"
-            style={{ "margin-top": ".7em"}}
+            style={{ "marginTop": ".7em"}}
             className=" ui image "
             />
             </div>
