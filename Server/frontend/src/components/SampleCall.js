@@ -11,6 +11,7 @@ const SampleCall = () => {
 
     const [params,setParams]= useState({length:0})
     const [content,setContent] = useState("")
+    const [showContent,setShowContent]=useState(false)
     
 
     const makeApiCall= () => {
@@ -25,19 +26,21 @@ const SampleCall = () => {
     }
 
     useEffect(() =>  {
+        if(showContent){
         const apiCall = async (req,res) => {
            const baseUrl= "https://enigmatic-savannah-03269.herokuapp.com/proxy/words"
            try{
                const data = await axios.get(baseUrl,
                    {params:params})
                setContent(data.data)
-               
+
             } catch(err){
                
                //console.log(err)
             }
        }
        apiCall()
+    }
        
    },[params])
 
@@ -99,12 +102,13 @@ const SampleCall = () => {
                 </div>
                
                 <div onClick={() => {
+                    setShowContent(true)
                     makeApiCall()
                 }} className="ui submit button">Submit</div>
             </div>
             <div className="ui segment">
-                On submit results apeare here
-                {content}
+                
+                {showContent?content:"On submit results appear here"}
             </div>
          </div>
 
