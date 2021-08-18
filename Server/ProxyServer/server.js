@@ -15,7 +15,7 @@ app.use(cors());
 
 //app.use(express.static(path.join(__dirname,'public')))
 
-app.use(express.static(path.join(__dirname, 'frontend/build')))
+app.use(express.static(path.join(__dirname, 'build')))
 
 app.get("/proxy/words", async (req,res) => {
     const baseUrl= "http://loripsum.net/api"
@@ -45,9 +45,10 @@ app.get("/proxy", async (req,res) => {
 
 
 app.get("/",(req,res) => {
+    res.set('Content-Type', 'text/html');
     res.sendFile(path.join(__dirname,"build",'index.html'))
    
-    // res.set('Content-Type', 'text/html');
+    
     // res.send(Buffer.from("<h2>Eric's first project!</h2><p> use a GET to /proxy/ and follow with the desired url"));
     
 })
