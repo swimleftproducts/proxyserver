@@ -2,6 +2,7 @@
 
 const paramLogic = (query,url) =>{
     console.log(url)
+    console.log(query)
     
    if("number" in query){
        url = url +"/"+ query.number
@@ -10,17 +11,27 @@ const paramLogic = (query,url) =>{
        url = url +"/"+ query.length
     }
     if("decorate" in query){
-        url = url +"/"+ query.decorate
+        if(query.decorate){
+            url = url +"/"+ "decorate"
+        }
     }
     if("dl" in query){
-         url = url +"/"+ url,query.dl
+        if(query.dl){
+            url = url +"/"+ "dl"
+        }
+         
     }
     if("headers" in query){
-         url = url+"/"+ query.headers
+        if(query.headers){
+            url = url+"/"+ "headers"
+        }
     }
     if("plaintext" in query){
-                url = url+"/plaintext"
+        if(query.plaintext){
+            url = url+"/plaintext"
+        }                
     }
+    console.log(url)
 
     return url
 }

@@ -9,7 +9,7 @@ const SampleCall = () => {
     const [number, setNumber] = useState(2)
     const [decorate, setDecorate] = useState(true)
 
-    const [params,setParams]= useState({})
+    const [params,setParams]= useState({length:0})
     const [content,setContent] = useState("")
     
 
@@ -31,6 +31,7 @@ const SampleCall = () => {
                const data = await axios.get(baseUrl,
                    {params:params})
                setContent(data.data)
+               
             } catch(err){
                
                //console.log(err)
