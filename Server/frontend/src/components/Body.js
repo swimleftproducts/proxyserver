@@ -36,7 +36,7 @@ const Body = (props) => {
                     </h1>
                     <h2>Currently a call to this api will result in a CORS rejection because the header is not set as required by the browser</h2>
                     <div>
-                      <p> This site proxides a proxy server that lets you make a call to https://enigmatic-savannah-03269.herokuapp.com/api/words and received back JSON loripsum according to the parameters you send.
+                      <p> This site proxides a proxy server that lets you make a call to https://enigmatic-savannah-03269.herokuapp.com/proxy/words and received back JSON loripsum according to the parameters you send.
                         </p>
                         <p>
                             Supported parameters are:
