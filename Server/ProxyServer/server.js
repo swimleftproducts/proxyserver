@@ -12,7 +12,7 @@ const app = express()
 
 app.use(cors());
 
-
+// 
 // app.use(express.static(path.join(__dirname,'public')))
 
 app.use(express.static(path.join(__dirname, 'build')))
@@ -53,7 +53,7 @@ app.get("/",(req,res) => {
     
 })
 
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3002;
 
 app.listen(PORT,() => {
 
